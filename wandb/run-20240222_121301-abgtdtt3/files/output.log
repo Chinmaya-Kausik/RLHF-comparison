@@ -1,0 +1,80 @@
+
+
+  0%|                                                                                                   | 1/9375 [00:38<99:35:10, 38.25s/it]Error in sys.excepthook:
+Traceback (most recent call last):
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\site-packages\wandb\sdk\lib\exit_hooks.py", line 52, in exc_handler
+    traceback.print_exception(exc_type, exc, tb)
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\traceback.py", line 124, in print_exception
+    te = TracebackException(type(value), value, tb, limit=limit, compact=True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\traceback.py", line 733, in __init__
+    self.stack = StackSummary._extract_from_extended_frame_gen(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\traceback.py", line 438, in _extract_from_extended_frame_gen
+    f.line
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\traceback.py", line 323, in line
+    self._line = linecache.getline(self.filename, self.lineno)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\linecache.py", line 30, in getline
+    lines = getlines(filename, module_globals)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\linecache.py", line 46, in getlines
+    return updatecache(filename, module_globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\linecache.py", line 93, in updatecache
+    stat = os.stat(fullname)
+           ^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+Original exception was:
+Traceback (most recent call last):
+  File "c:\Users\chinm\Documents\GitHub\RLHF-comparison\peft-playground.py", line 22, in <module>
+    trainer.train()
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\site-packages\trl\trainer\sft_trainer.py", line 331, in train
+    output = super().train(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\site-packages\transformers\trainer.py", line 1624, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\site-packages\transformers\trainer.py", line 1961, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\site-packages\transformers\trainer.py", line 2902, in training_step
+    loss = self.compute_loss(model, inputs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\site-packages\transformers\trainer.py", line 2925, in compute_loss
+    outputs = model(**inputs)
+              ^^^^^^^^^^^^^^^
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\site-packages\peft\peft_model.py", line 1083, in forward
+    return self.base_model(
+           ^^^^^^^^^^^^^^^^
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\site-packages\peft\tuners\tuners_utils.py", line 161, in forward
+    return self.model.forward(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\site-packages\transformers\models\gpt_neo\modeling_gpt_neo.py", line 1005, in forward
+    loss = loss_fct(shift_logits.view(-1, shift_logits.size(-1)), shift_labels.view(-1))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\site-packages\torch\nn\modules\loss.py", line 1179, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\chinm\miniconda3\envs\rlhf\Lib\site-packages\torch\nn\functional.py", line 3059, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
