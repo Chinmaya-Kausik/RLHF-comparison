@@ -1,0 +1,81 @@
+
+
+  0%|                                                                                                    | 1/9375 [00:26<69:58:46, 26.88s/it]Traceback (most recent call last):
+  File "/home/chinmayakausik/RLHF-comparison/peft-playground.py", line 22, in <module>
+    trainer.train()
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 331, in train
+    output = super().train(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/transformers/trainer.py", line 1627, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/transformers/trainer.py", line 1964, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/transformers/trainer.py", line 2905, in training_step
+    loss = self.compute_loss(model, inputs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/transformers/trainer.py", line 2928, in compute_loss
+    outputs = model(**inputs)
+              ^^^^^^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/peft/peft_model.py", line 1083, in forward
+    return self.base_model(
+           ^^^^^^^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/peft/tuners/tuners_utils.py", line 161, in forward
+    return self.model.forward(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/transformers/models/gpt_neo/modeling_gpt_neo.py", line 975, in forward
+    transformer_outputs = self.transformer(
+                          ^^^^^^^^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/transformers/models/gpt_neo/modeling_gpt_neo.py", line 843, in forward
+    outputs = block(
+              ^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/transformers/models/gpt_neo/modeling_gpt_neo.py", line 570, in forward
+    attn_outputs = self.attn(
+                   ^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/transformers/models/gpt_neo/modeling_gpt_neo.py", line 522, in forward
+    return self.attention(
+           ^^^^^^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/transformers/models/gpt_neo/modeling_gpt_neo.py", line 283, in forward
+    attn_output, attn_weights = self._attn(query, key, value, attention_mask, head_mask)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chinmayakausik/miniconda3/envs/rlhf/lib/python3.12/site-packages/transformers/models/gpt_neo/modeling_gpt_neo.py", line 236, in _attn
+    mask_value = torch.tensor(mask_value, dtype=attn_weights.dtype).to(attn_weights.device)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
