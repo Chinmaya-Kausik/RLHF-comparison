@@ -1,18 +1,15 @@
 from transformers import TrainingArguments, AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
-from datasets import load_dataset
-from accelerate import Accelerator
-from data import tldr_sft_generator, ProcessedData
+from datasets import load_from_disk
+#from accelerate import Accelerator
 from trl import SFTTrainer
+from peft import LoraConfig
 import torch
+import wandb
 
-accelerator = Accelerator()
-
-tokenizer = AutoTokenizer.from_pretrained("gpt2", padding_side="right")
-tokenizer.add_special_tokens({"pad_token": "[PAD]"})
-
-dataset = ProcessedData(tokenizer, tldr_sft_generator)
-dataset = dataset.with_format("torch")
-
+#accelerator = Accelerator()
+#tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6B")
+#tokenizer.add_special_tokens({"pad_token": "[PAD]"})
+dataset = load_from_disk("./datasets/sft_tldr_dataset")
 
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
@@ -21,13 +18,23 @@ bnb_config = BitsAndBytesConfig(
     bnb_4bit_compute_dtype=torch.bfloat16,
 )
 
-model_id = "openai-community/gpt2-large"
+peft_config = LoraConfig(
+    r=8,
+    lora_alpha=16,
+    lora_dropout=0.1,
+    bias="none",
+    task_type="CAUSAL_LM"
+)
+
+model_id = "openai-community/gpt2-medium"
 model_kwargs = {
-#    "quantization_config": bnb_config
+    "quantization_config": bnb_config
 }
+
 training_args = TrainingArguments(
-    output_dir="ppo/models/tldr-gpt2-sft",
+    output_dir="models/tldr-gpt2-sft",
     max_steps=1,
+    report_to="wandb"
 )
 
 sft_trainer = SFTTrainer(
@@ -35,6 +42,7 @@ sft_trainer = SFTTrainer(
     packing=True,
     train_dataset=dataset,
     args=training_args,
+    peft_config = peft_config,
     model_init_kwargs=model_kwargs
 )
 
