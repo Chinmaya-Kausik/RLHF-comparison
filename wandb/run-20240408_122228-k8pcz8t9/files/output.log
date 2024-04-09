@@ -1,0 +1,27 @@
+  0%|                                                                                                                                                | 0/39 [00:00<?, ?it/s]/home/ckausik/.local/lib/python3.9/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+
+
+
+
+
+ 26%|██████████████████████████████████▌                                                                                                    | 10/39 [00:10<00:28,  1.02it/s]/home/ckausik/.local/lib/python3.9/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+
+
+
+
+ 51%|█████████████████████████████████████████████████████████████████████▏                                                                 | 20/39 [00:23<00:19,  1.01s/it]/home/ckausik/.local/lib/python3.9/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+
+
+
+
+ 77%|███████████████████████████████████████████████████████████████████████████████████████████████████████▊                               | 30/39 [00:34<00:08,  1.02it/s]/home/ckausik/.local/lib/python3.9/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 39/39 [00:44<00:00,  1.14s/it]
+{'train_runtime': 52.8936, 'train_samples_per_second': 11.627, 'train_steps_per_second': 0.737, 'train_loss': 1.7571876721504407, 'epoch': 3.0}

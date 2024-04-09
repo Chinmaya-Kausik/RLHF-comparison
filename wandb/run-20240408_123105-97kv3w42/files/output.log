@@ -1,0 +1,27 @@
+  0%|                                                                                                                                                | 0/39 [00:00<?, ?it/s]/home/ckausik/.local/lib/python3.9/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+
+
+
+
+ 26%|██████████████████████████████████▌                                                                                                    | 10/39 [00:10<00:28,  1.00it/s]/home/ckausik/.local/lib/python3.9/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+{'loss': 1.7774, 'grad_norm': 0.3026493489742279, 'learning_rate': 4.445089385796099e-05, 'epoch': 0.77}
+
+
+
+ 51%|█████████████████████████████████████████████████████████████████████▏                                                                 | 20/39 [00:21<00:18,  1.01it/s]/home/ckausik/.local/lib/python3.9/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+{'loss': 1.772, 'grad_norm': 0.28297242522239685, 'learning_rate': 2.606103007990371e-05, 'epoch': 1.54}
+
+
+
+ 77%|███████████████████████████████████████████████████████████████████████████████████████████████████████▊                               | 30/39 [00:31<00:08,  1.02it/s]/home/ckausik/.local/lib/python3.9/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+{'loss': 1.7674, 'grad_norm': 0.279168039560318, 'learning_rate': 6.951097651136889e-06, 'epoch': 2.31}
+
+
+
+ 97%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌   | 38/39 [00:39<00:00,  1.01it/s]
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 39/39 [00:40<00:00,  1.03s/it]

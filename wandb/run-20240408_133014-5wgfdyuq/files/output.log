@@ -1,0 +1,42 @@
+
+  0%|                                                                                                                                    | 0/987 [00:00<?, ?it/s]/home/ckausik/.local/lib/python3.9/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+Traceback (most recent call last):
+  File "/home/ckausik/RLHF-comparison/sft_summaries.py", line 96, in <module>
+    sft_trainer.train()
+  File "/home/ckausik/.local/lib/python3.9/site-packages/trl/trainer/sft_trainer.py", line 360, in train
+    output = super().train(*args, **kwargs)
+  File "/home/ckausik/.local/lib/python3.9/site-packages/transformers/trainer.py", line 1780, in train
+    return inner_training_loop(
+  File "/home/ckausik/.local/lib/python3.9/site-packages/transformers/trainer.py", line 2118, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/home/ckausik/.local/lib/python3.9/site-packages/transformers/trainer.py", line 3036, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/home/ckausik/.local/lib/python3.9/site-packages/transformers/trainer.py", line 3059, in compute_loss
+    outputs = model(**inputs)
+  File "/home/ckausik/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ckausik/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ckausik/.local/lib/python3.9/site-packages/torch/nn/parallel/data_parallel.py", line 186, in forward
+    return self.gather(outputs, self.output_device)
+  File "/home/ckausik/.local/lib/python3.9/site-packages/torch/nn/parallel/data_parallel.py", line 203, in gather
+    return gather(outputs, output_device, dim=self.dim)
+  File "/home/ckausik/.local/lib/python3.9/site-packages/torch/nn/parallel/scatter_gather.py", line 104, in gather
+    res = gather_map(outputs)
+  File "/home/ckausik/.local/lib/python3.9/site-packages/torch/nn/parallel/scatter_gather.py", line 95, in gather_map
+    return type(out)((k, gather_map([d[k] for d in outputs]))
+  File "<string>", line 9, in __init__
+  File "/home/ckausik/.local/lib/python3.9/site-packages/transformers/utils/generic.py", line 393, in __post_init__
+    for idx, element in enumerate(iterator):
+  File "/home/ckausik/.local/lib/python3.9/site-packages/torch/nn/parallel/scatter_gather.py", line 95, in <genexpr>
+    return type(out)((k, gather_map([d[k] for d in outputs]))
+  File "/home/ckausik/.local/lib/python3.9/site-packages/torch/nn/parallel/scatter_gather.py", line 89, in gather_map
+    return Gather.apply(target_device, dim, *outputs)
+  File "/home/ckausik/.local/lib/python3.9/site-packages/torch/autograd/function.py", line 553, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+  File "/home/ckausik/.local/lib/python3.9/site-packages/torch/nn/parallel/_functions.py", line 75, in forward
+    return comm.gather(inputs, ctx.dim, ctx.target_device)
+  File "/home/ckausik/.local/lib/python3.9/site-packages/torch/nn/parallel/comm.py", line 231, in gather
+    return torch._C._gather(tensors, dim, destination)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.70 GiB. GPU 0 has a total capacity of 44.35 GiB of which 1.53 GiB is free. Including non-PyTorch memory, this process has 42.81 GiB memory in use. Of the allocated memory 42.06 GiB is allocated by PyTorch, and 303.62 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

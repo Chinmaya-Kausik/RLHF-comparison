@@ -1,0 +1,212 @@
+{
+    "os": "Linux-4.18.0-372.75.1.el8_6.x86_64-x86_64-with-glibc2.28",
+    "python": "3.9.7",
+    "heartbeatAt": "2024-04-08T15:43:04.634826",
+    "startedAt": "2024-04-08T15:43:03.684494",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/ckausik/RLHF-comparison/sft_summaries.py",
+    "codePathLocal": "sft_summaries.py",
+    "codePath": "sft_summaries.py",
+    "git": {
+        "remote": "https://github.com/Chinmaya-Kausik/RLHF-comparison",
+        "commit": "6c93750e414a9af69ab925621efac63b31f38154"
+    },
+    "email": "chinmaya.kausik.1@gmail.com",
+    "root": "/home/ckausik/RLHF-comparison",
+    "host": "gl1520.arc-ts.umich.edu",
+    "username": "ckausik",
+    "executable": "/sw/pkgs/arc/python3.9-anaconda/2021.11/bin/python",
+    "cpu_count": 32,
+    "cpu_count_logical": 32,
+    "cpu_freq": {
+        "current": 3570.8742499999994,
+        "min": 3900.0,
+        "max": 3900.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3599.999,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3600.005,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3600.137,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3600.013,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 2628.279,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3600.248,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3606.818,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3599.997,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3601.893,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3600.979,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3599.915,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3599.998,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3600.087,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3598.827,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3598.722,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3599.975,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3600.036,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3599.999,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3599.676,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3600.242,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3600.051,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3600.052,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3599.974,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3599.947,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3600.012,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3599.952,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3599.65,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3600.83,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3594.795,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3600.217,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3600.001,
+            "min": 3900.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3600.565,
+            "min": 3900.0,
+            "max": 3900.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 19.990234375,
+            "used": 10.406341552734375
+        }
+    },
+    "gpu": "NVIDIA A40",
+    "gpu_count": 2,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA A40",
+            "memory_total": 48305799168
+        },
+        {
+            "name": "NVIDIA A40",
+            "memory_total": 48305799168
+        }
+    ],
+    "memory": {
+        "total": 376.3263702392578
+    }
+}

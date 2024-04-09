@@ -1,0 +1,22 @@
+  0%|                                                                                                                                                | 0/39 [00:00<?, ?it/s]/home/ckausik/.local/lib/python3.9/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 39/39 [00:38<00:00,  1.02it/s]
+{'train_runtime': 44.5819, 'train_samples_per_second': 13.795, 'train_steps_per_second': 0.875, 'train_loss': 1.756247104742588, 'epoch': 3.0}
